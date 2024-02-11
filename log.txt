@@ -1,0 +1,5 @@
+[10.02.2024 20:56:08] 	 [INFO] 	 [Modul:'Connect'] 	 Message: Connection succeeded.
+[10.02.2024 20:56:08] 	 [INFO] 	 [Modul:'Connect'] 	 Message: Connection succeeded.
+[10.02.2024 20:56:08] 	 [INFO] 	 [Modul:'Sync'] 	 Message: Offset (read tt hist. data 
+[10.02.2024 20:56:08] 	 [INFO] 	 [Modul:'Sync100'] 	 Message: Query:  SELECT providerid , ts , lastupdated , productcodes, headline, body , keywords, source , priority , country   FROM quotedb.news  WHERE lastupdated > '2024-02-07 00:00:00'  AND source IN ('DPA-AFX', 'DJ') and provider = 0  LIMIT 100
+[10.02.2024 20:56:08] 	 [INFO] 	 [Modul:'Sync'] 	 Message: Offset tt end
