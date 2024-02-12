@@ -10,24 +10,10 @@ namespace sino.CollectNews
     /// <summary>
     /// 
     /// </summary>
-    public class BenzingaAPI
+    public class BenzingaAPI : TimeDate
     {
 
-        /// <summary>
-        /// Get GMT from UTC
-        /// </summary>
-        /// <param name="sDatetime"></param>
-        /// <returns></returns>
-        private string  getGMT(string sDatetime)
-        {
-            DateTime parsedDate;
-            IFormatProvider provider = new CultureInfo("de-DE");
-            bool isValidDate = DateTime.TryParse(sDatetime, provider , DateTimeStyles.AssumeUniversal, out parsedDate);
-            if (isValidDate)
-                return parsedDate.ToString("yyyy-MM-dd HH:mm:ss"); 
-            else
-                return null;
-        }
+
         
         public int id { get; set; }
         

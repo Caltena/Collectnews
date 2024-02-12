@@ -6,19 +6,19 @@ public class BenzingaWSS
 {
     public string api_version { get; set; }
     public string kind { get; set; }
-    public cBenzingaWSS_Data WssData { get; set; }   
+    public BenzingaWSS_Data WssData { get; set; }   
 }
 
-public class cBenzingaWSS_Data
+public class BenzingaWSS_Data
 {
     public string action { get; set; }
     public int id { get; set; }
-    public cBenzingaWSS_Content WssContent { get; set; }
+    public BenzingaWSS_Content WssContent { get; set; }
     public DateTime timestamp { get; set; }
 }
 
 
-public class cBenzingaWSS_Content
+public class BenzingaWSS_Content : TimeDate
 {
     public int id { get; set; }
     
@@ -119,16 +119,7 @@ public class cBenzingaWSS_Content
     /// </summary>
     /// <param name="sDatetime"></param>
     /// <returns></returns>
-    private string  getGMT(string sDatetime)
-    {
-        DateTime parsedDate;
-        IFormatProvider provider = new CultureInfo("de-DE");
-        bool isValidDate = DateTime.TryParse(sDatetime, provider , DateTimeStyles.AssumeUniversal, out parsedDate);
-        if (isValidDate)
-            return parsedDate.ToString("yyyy-MM-dd HH:mm:ss"); 
-        else
-            return null;
-    }
+
     
 }
 
